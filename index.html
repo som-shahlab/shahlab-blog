@@ -4,6 +4,17 @@ title: Home
 ---
 
 <div class="posts">
+  <!-- Display Welcome Page-->
+  {% assign home_post = site.pages | where:"title","Welcome to the Shah Lab!" %}
+  {% for post in home_post %}
+    <h1>{{ post.title }}</h1>
+    {{ post.content }}
+  {% endfor %}
+
+  <h1>Posts</h1>
+  <hr>
+
+  <!-- Display other posts-->
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
