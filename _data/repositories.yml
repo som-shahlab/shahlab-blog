@@ -1,0 +1,9 @@
+repo_description_lines_max: 2
+
+github_repos:
+  - som-shahlab/ehrshot-benchmark
+  - som-shahlab/femr
+  - som-shahlab/medalign
+  - som-shahlab/trove
+  - som-shahlab/ehr-rwe
+  - som-shahlab/psych-nlp
