@@ -98,7 +98,7 @@ However, there is a need for _more_ studies that evaluate Human-AI collaboration
 
 ##### Iterative interaction with generative AI
 
-Additionally, most of these studies focus on a single interaction between the AI model output and the clinician for a given case.  Though most papers that were reviewed do not use generative AI (which calls for iterative interaction), _ChatGPT Influence on Medical Decision-Making, Bias, and Equity_<d-cite key="Goh2023-vb"></d-cite> explores an iterative interaction, where a clinician views the case initially and then proceeds to consult an AI model for further analysis.  However, there is a need for more research in generative AI-human collaboration when it comes to clinical settings, including finding methods to evaluate automation bias in these collaboration settings.
+Additionally, most of these studies focus on a single interaction between the AI model output and the clinician for a given case.  Though most papers that were reviewed do not use generative AI (which calls for iterative interaction), _ChatGPT Influence on Medical Decision-Making, Bias, and Equity_<d-cite key="Goh2023-vb"></d-cite> explores an iterative interaction, where a clinician views the case initially and then proceeds to consult an AI model for further analysis.  However, there is a need for more research in generative AI-human collaboration when it comes to clinical settings, including finding methods to evaluate automation bias in these Human-AI collaboration methods.
 
 ---
 
