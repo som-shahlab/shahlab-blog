@@ -3,44 +3,109 @@ layout: distill
 title: "Human AI Collaboration: Literature Review"
 description: A literature review on the role of AI in clinical decision making.
 
+authors:
+  - name: Karthik S. Vedula
+    url: "https://www.karthikvedula.com"
+    affiliations:
+      name: Poolesville High School
+  - name: Alison Callahan
+    url: "https://med.stanford.edu/profiles/alison-callahan"
+    affiliations:
+      name: Stanford University
+  - name: Akshay Swaminathan
+    url: "https://www.akshayswaminathan.com/"
+    affiliations:
+      name: Stanford University
+
 bibliography: 2024-07-12-Human-AI-Collab.bib
 
 toc:
   - name: Introduction
   - name: Review of Literature
   - name: Conclusion
-  - name: What's Next?
+  - name: Future Work
   - name: More Info on the Papers
 ---
 
 # Introduction
 
+We have seen AI tools assisting programmers like [Code Llama](https://ai.meta.com/blog/code-llama-large-language-model-coding/), AI tools assisting drivers with self-driving cars, but can AI tools assist clinicians in making medical decisions?
+
+To some this might seem like a bad idea -- what if AI makes mistakes?  And will AI replace physicians?  This blog post will show where AI seems to help clinicians, where it falls short, and where this field of research is going.  We will explore cases where AI and clinicians, when working together in diagnosing, can provide superior performance; we will explore cases where AI was used to monitor patients alongside physicians; and we will explore cases where this AI-assistance translated into not just better accuracy, but better real-world clinical outcomes.
+
 # Review of Literature
+
+This paper selection primarily focuses on journal publications, specifically on studies involving the use of an AI model by clinicians as part of their decision making.  This was done using PubMed and the "related articles" feature.  It is important to note that methods in these papers primarily involve discriminative rather than generative AI (with the exception of the study evaluating ChatGPT & clinicians)<d-cite key="Goh2023-vb"></d-cite>.
+
+Information on these studies are compiled into the table below.  Additional information for these studies are also included at the end of the blog post **(please click on "info" in the title column of the table to jump to that section)**.  The results of these papers come in three categories:
+
+* ✅ A green checkmark indicates results where Human-AI collaboration derived superior results.
+
+* 🟨 A yellow box indicates that **Human-AI collaboration generally provided superior results** but the researchers found **cases where Human-AI collaboration does not help.**
+
+* ❌ A red cross indicates thart Human-AI collaboration did not provide any benefits.
 
 | Title                                                                                                                                                                                                                                                                                                                                                                                                              | Research Question                                                                                                                                                            | Study Scale                                   | Study Design                                                                                                                                                                                                                                            | Did Human-AI Collaboration Work?                                                                                                                                                                                                                                                                                                       |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Interaction between clinicians and artificial intelligence to detect fetal atrioventricular septal defects on ultrasound: how can we optimize collaborative performance? [(info)](#interaction-between-clinicians-and-artificial-intelligence-to-detect-fetal-atrioventricular-septal-defects-on-ultrasound-how-can-we-optimize-collaborative-performance)                                                         | Can AI assistance (including confidence and explanations) help clinicians better detect fetal atrioventricular sepal defects?                                                | 10 Clinicians; 2000 fetal four chamber images | Ten clinicians reviewed 2000 fetal four-chamber images in various conditions to identify normal images and those with AVSD, using different types of AI assistance (with and without classification, confidence, and explanations)                      | 🟨 Across all kinds of clinicians, human and AI collaboration performed better than just one of the two (only human predictions or only AI predictions), but explanations or confidence didn't compensate for incorrect model predictions.                                                                                             |
 | Measuring the Impact of AI in the Diagnosis of Hospitalized Patients. [(info)](#measuring-the-impact-of-ai-in-the-diagnosis-of-hospitalized-patients)                                                                                                                                                                                                                                                              | Do image-based explanations reduce the negative effects of influence from systematically biased models?                                                                      | 457 Clinicians                                | Each clinician assessed 9 clinical vignettes for the likelihood of pneumonia, heart failure, or COPD, with varying AI prediction types (standard or systematically biased) and a peer consultation designed to provide upper-bound diagnostic accuracy. | 🟨  Standard AI predictions helped clinicians, and standard AI predictions with explanations further increased accuracy. Participant diagnostic accuracy was highest with an always-correct clinical consultation. Systematically biased AI predictions decreased clinician accuracy regardless of whether explanations were provided. |
 | AI-enabled electrocardiography alert intervention and all-cause mortality. [(info)](#ai-enabled-electrocardiography-alert-intervention-and-all-cause-mortality)                                                                                                                                                                                                                                                    | Does a warning message to the treating physician generated by an AI model (identifying patients with high risk) prompt management decisions leading to a decrease of deaths? | 39 Clinicians; 15,965 Patients                | The study evaluated if the AI-ECG model could identify deteriorating patients and reduce the need for additional ECGs by comparing mortality rates between an intervention group receiving AI alerts and a control group monitored by physicians alone. | ✅ The study showed a significant decrease in mortality with AI-ECG assistance compared to the control group, particularly in high-risk cases, and suggested that the AI model's novelty and manageable alert frequency helped maintain quality of care and reduce mortality through increased physician attention.                     |
-| Artificial intelligence-assisted diagnosis of congenital heart disease and associated pulmonary arterial hypertension from chest radiographs. [(info)](#artificial-intelligence-assisted-diagnosis-of-congenital-heart-disease-and-associated-pulmonary-arterial-hypertension-from-chest-radiographs)                                                                                                              | Can AI predictions help radiologists in diagnosing congenital heart disease (CHD) and associated pulmonary arterial hypertension (PAH-CHD)?                                  | 5 Clinicians; 495 CXR images                  | The study was a multireader multicase randomized crossover study, where clinicians reviewed each CXR for CHD and PAH-CHD twice (with a 1-month washout period), once with an AI prediction and once without.                                            | ✅ AI predictions improved clinician accuracy for both CHD and PAH-CHD.                                                                                                                                                                                                                                                                 |
+| Artificial intelligence-assisted diagnosis of congenital heart disease and associated pulmonary arterial hypertension from chest radiographs. [(info)](#artificial-intelligence-assisted-diagnosis-of-congenital-heart-disease-and-associated-pulmonary-arterial-hypertension-from-chest-radiographs)                                                                                                              | Can AI predictions help radiologists in diagnosing congenital heart disease (CHD) and associated pulmonary arterial hypertension (PAH-CHD)?                                  | 5 Clinicians; 495 CXR images                  | The study was a multireader multicase randomized crossover study, where clinicians reviewed each chest x-ray (CXR) for CHD and PAH-CHD twice (with a 1-month washout period), once with an AI prediction and once without.                                            | ✅ AI predictions improved clinician accuracy for both CHD and PAH-CHD.                                                                                                                                                                                                                                                                 |
 | Use of Voice-Based Conversational Artificial Intelligence for Basal Insulin Prescription Management Among Patients With Type 2 Diabetes: A Randomized Clinical Trial. [(info)](#use-of-voice-based-conversational-artificial-intelligence-for-basal-insulin-prescription-management-among-patients-with-type-2-diabetes-a-randomized-clinical-trial)                                                               | Does a voice-based interface help in providing improved “time to optimal insulin dosing, insulin adherence, and glycemic control”?                                           | 32 Patients                                   | The intervention group had an Amazon smart speaker which gave them information for insulin management, while the control group was instructed to fill out an online blood glucose and insulin log daily for the duration of the trial.                  | ✅ PAID-5 scores were lower for the intervention group compared to the control. PAID-5 is a qualitative survey measurement for diabetes where lower scores are more favorable.                                                                                                                                                          |
 | Conventional Versus Artificial Intelligence-Assisted Interpretation of Chest Radiographs in Patients With Acute Respiratory Symptoms in Emergency Department: A Pragmatic Randomized Clinical Trial. [(info)](#conventional-versus-artificial-intelligence-assisted-interpretation-of-chest-radiographs-in-patients-with-acute-respiratory-symptoms-in-emergency-department-a-pragmatic-randomized-clinical-trial) | Does AI-assistance (predictions) help radiologists interpret chest radiographs in patients with acute respiratory symptoms in ED?                                            | 35,756 Patients                               | Patients were put into an intervention and a control group in a ratio of 1:1. The intervention group had clinicians review the chest radiograph with an AI model prediction accompanied, while the control group did not.                               | ❌ There was no association between using AI predictions and not using predictions with respect to clinician performance                                                                                                                                                                                                                |
 | ChatGPT Influence on Medical Decision-Making, Bias, and Equity: A Randomized Study of Clinicians Evaluating Clinical Vignettes. [(info)](#chatgpt-influence-on-medical-decision-making-bias-and-equity-a-randomized-study-of-clinicians-evaluating-clinical-vignettes)                                                                                                                                             | Can AI positively influence physicians in their clinical decision making without introducing or exacerbating demographic bias?                                               | 50 Clinicians                                 | Participants reviewed a clinical vignette video (randomly chosen whether it featured a white male or a black female), and could then change their answers after reviewing suggestions from ChatGPT+.                                                    | ✅ In both cases (vignettes featuring a white male and a black female), accuracy by the clinicians increased by 18% after they reviewed suggestions from ChatGPT+.                                                                                                                                                                      |
 | Artificial intelligence suppression as a strategy to mitigate artificial intelligence automation bias. [(info)](#artificial-intelligence-suppression-as-a-strategy-to-mitigate-artificial-intelligence-automation-bias)                                                                                                                                                                                            | Can AI-induced automation bias be mitigated using AI?                                                                                                                        | 40 Clinicians; 200 cases                      | Clinicians were assigned to either the AI-assisted group or the AI-unassisted group.  After a washout period of 14 days, clinicians switched to the other group and diagnosed same 200 MRIs.                                                            | 🟨 Application of AI significantly increased the clinicians’ accuracy, but 45.5% of the total mistakes in the AI-assisted round were associated with clinicians being misleaded by AI predictions, though all clinicians denied that AI predictions misled them in any way.                                                            |
-{:.l-screen}
+{:.l-page}
 
 # Conclusion
 
-# What's Next?
+These are our takeaways from this review:
 
-So far, a lot of these studies compare human-AI collaboration with retrospective data.
+##### Human-AI collaboration generally works, as long as AI is accurate
+
+With the exception of one study, all experiments showed that providing AI predictions to clinicians offered better accuracy compared to not providing AI predictions.  However, most studies also displayed how incorrect AI predictions can adversely influence clinicians, a case of automation bias.
+
+Automation bias is the tendency to over-rely on automation.<d-cite key="Goddard2012-wf"></d-cite>
+{:.l-gutter}
+
+##### AI models can help clinicians even if AI models aren't perfect
+
+Even though AI models may not have perfect accuracy, Human-AI collaboration has shown to provide better performance than both
+
+* evaluation by clinicians without AI-assistance; and
+* AI predictions without clinician influence.
+
+Studies like _Interaction between clinicians and artificial intelligence to detect fetal atrioventricular septal defects on ultrasound_<d-cite key="Day2024-wh"></d-cite> and _ChatGPT Influence on Medical Decision-Making, Bias, and Equity_<d-cite key="Goh2023-vb"></d-cite> exhibited this phenomenon.
+
+##### Providing AI confidence or explanations does not compensate for incorrect predictions
+
+Studies like _Interaction between clinicians and artificial intelligence to detect fetal atrioventricular septal defects on ultrasound_<d-cite key="Day2024-wh"></d-cite> and _Measuring the Impact of AI in the Diagnosis of Hospitalized Patients_<d-cite key="Jabbour2023-rd"></d-cite> show that using explanations or confidence levels to assist an AI prediction doesn't substantially prevent clinicians from recognizing incorrect AI predictions, resulting in worse performance from the Human-AI collaboration.
 
 
+# Future Work
+
+##### Beyond retrospective studies
+
+So far, a lot of these studies compared Human-AI collaboration with retrospective data.  This means clinicians reviewed data from patients who have already been treated/attended to.   This leads these studies to not be the best representation of how humans and AI algorithms can work together in the real-world, since the collaboration isn't happening in real time as patients are getting treated.  Some of these papers did indeed differ:
+
+* _AI-enabled electrocardiography alert intervention and all-cause mortality_<d-cite key="Lin2024-oo"></d-cite>explored this real-time Human-AI interaction and provided insights on issues like alert-fatigue, which cannot necessarily be assessed in retrospective data studies.
+
+* _Conventional Versus Artificial Intelligence-Assisted Interpretation of Chest Radiographs in Patients With Acute Respiratory Symptoms in Emergency Department_<d-cite key="Hwang2023-lv"></d-cite> also featured this kind of research, with an AI prediction being provided immediately to the radiologists while in the emergency department
+
+* _Use of Voice-Based Conversational Artificial Intelligence for Basal Insulin Prescription Management Among Patients With Type 2 Diabetes_<d-cite key="Nayak2023-em"></d-cite> featured a real-time Human-AI interaction environment, but not primarily between AI and clinicians (but rather studied AI-patient interaction).
+
+However, there is a need for _more_ studies that evaluate Human-AI collaboration in situations when the "ground truth" isn't immediately available, where decisions beyond diagnosis must be made with purely the clinician and AI's judgement.
+
+##### Iterative interaction with generative AI
+
+Additionally, most of these studies focus on a single interaction between the AI model output and the clinician for a given case.  Though most papers that were reviewed do not use generative AI (which calls for iterative interaction), _ChatGPT Influence on Medical Decision-Making, Bias, and Equity_<d-cite key="Goh2023-vb"></d-cite> explores an iterative interaction, where a clinician views the case initially and then proceeds to consult an AI model for further analysis.  However, there is a need for more research in generative AI-human collaboration when it comes to clinical settings, including finding methods to evaluate automation bias in these collaboration settings.
 
 ---
 
 
 # More Info on the Papers
+
+This section includes additional information on the papers that were reviewed, including more details on how the study was conducted, who the clinicans were, and the kinds of AI models used for the study.
 
 ## Interaction between clinicians and artificial intelligence to detect fetal atrioventricular septal defects on ultrasound: how can we optimize collaborative performance?<d-cite key="Day2024-wh"></d-cite>
 
@@ -76,7 +141,7 @@ The training data was a cohort of 121,130 cardiac four chamber images extracted 
 
 #### Explainability Method and Uncertainty Estimation
 
-Grad-CAM was used for providing explanations.  The model confidence was also provided to clinicians [WHAT METHOD?].
+Grad-CAM was used for providing explanations.  The model confidence was also provided to clinicians.
 
 ### Does Human + AI collaboration work?
 
@@ -86,13 +151,11 @@ Across all kinds of clinicians, human and AI collaboration performed better than
 
 Incorrect model outputs worsened clinician performance, which is expected as part of automation bias. Additional information was also provided to reduce negative effects of bad predictions (Confidence & GradCAM), but these actually worsened overall performance.
 
-
-INCLUDE RESULTS IMAGE HERE (HAS SPECIFIC NUMBERS)
-
-
+![Img]({{ site.baseurl }}/assets/img/day_et_al_humanAICollab.png)
+_Image from paper_
 
 
-----
+
 
 
 
@@ -118,6 +181,9 @@ The study contained 45 clinical vignettes.  Each clinician viewed 9 vignettes.  
     * By design, the clinical consultation was always correct, intended to provide an upper-bound clinican diagnostic accuracy
 
 After each vignette, the clinicians were asked to separately assess how likely (from a scale from 1 to 100) pneumonia, heart failure, or COPD was contributing to the patient's respiratory failure.
+
+![Img]({{ site.baseurl }}/assets/img/jabbour_et_al_humanAICollab.png)
+_Image from paper_
 
 ### Who were the clinicians?
 
@@ -160,7 +226,6 @@ Even clinicians when were provided perfectly accurate recommendations in the cli
 
 
 
----
 
 
 
@@ -203,7 +268,6 @@ One potential explanation for the reduced alert fatigue from physicians using th
 
 
 
----
 
 
 
@@ -224,7 +288,7 @@ This study can be split into three parts:
 2. evaluating model performance and comparing it to clinicians (done on a balanced dataset)
 3. evaluating model collaboration with clinicians.
 
-Radiologists evaluate CXRs for classical signs of CHD. Radiologists were presented with 330 CXRs for CHD and 165 CXRs for PAH-CHD diagnosis. These images were presented in a randomized order. The first time, 50% images accompanied with AI-based classification (clinicians were made aware that AI not always right), and the rest were not.  Radiologists provided their classification.  The second time (which proceeded after a 1-month washout period), 50% of the other images were with AI-based classification, while the rest were not.  This meant that diagnoses made by the radiologists were collected for each image with and without AI prediction assisting the clinician.
+Radiologists evaluated CXRs for classical signs of CHD. Radiologists were presented with 330 CXRs for CHD and 165 CXRs for PAH-CHD diagnosis. These images were presented in a randomized order. The first time, 50% images accompanied with AI-based classification (clinicians were made aware that AI not always right), and the rest were not.  Radiologists provided their classification.  The second time (which proceeded after a 1-month washout period), 50% of the other images were with AI-based classification, while the rest were not.  This meant that diagnoses made by the radiologists were collected for each image with and without AI prediction assisting the clinician.
 
 ### Who were the clinicians?
 
@@ -288,7 +352,6 @@ The mean specificity of radiologists who used AI assistance **was not significan
 
 
 
----
 
 
 
@@ -340,7 +403,6 @@ There are some limitations to this study.  The study did not compare this rule-b
 
 
 
----
 
 
 
@@ -389,7 +451,6 @@ There was no association between using AI-CAD for CR interpretation and the sens
 
 
 
----
 
 
 
@@ -420,7 +481,6 @@ In both cases (vignettes featuring a white male and a black female), accuracy by
 
 
 
----
 
 
 
@@ -443,7 +503,7 @@ Given these results, the study also proposed an AI suppression strategy, which u
 
 ### Who were the clinicians?
 
-???????????????????????????????????
+40 clinicians were invited for the study.
 
 ### Model Details
 
