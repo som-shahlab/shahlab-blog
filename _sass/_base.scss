@@ -5,7 +5,6 @@
 // Typography
 
 p,
-h1,
 h2,
 h3,
 h4,
@@ -17,6 +16,10 @@ li,
 span,
 strong {
   color: var(--global-text-color);
+}
+
+h1 {
+  color: var(--global-theme-color);
 }
 
 hr {
@@ -36,7 +39,7 @@ table {
 
 a,
 table.table a {
-  color: var(--global-theme-color);
+  color: #{$blue-color};
 
   &:hover {
     color: var(--global-theme-color);

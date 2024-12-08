@@ -25,12 +25,16 @@ d-article {
   h2,
   h3,
   h4,
-  h5,
-  h6,
   li,
   table {
     color: var(--global-text-color) !important;
   }
+
+  h5,
+  h6 {
+    color: var(--global-theme-color) !important;
+  }
+
   h1,
   h2,
   hr,
@@ -40,7 +44,7 @@ d-article {
     border-bottom-color: var(--global-divider-color) !important;
   }
   a {
-    color: var(--global-theme-color) !important;
+    color: #{$blue-color} !important;
     &:hover {
       color: var(--global-theme-color) !important;
     }
