@@ -79,6 +79,9 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Remove _site directory 🧹
+        run: |
+          rm -rf _site
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter
