@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://som-shahlab.github.io/shahlab-blog//sitemap.xml
+Sitemap: https://som-shahlab.github.io/shahlab-website//sitemap.xml
