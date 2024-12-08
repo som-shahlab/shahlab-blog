@@ -7,7 +7,7 @@ Adapted for the Shah lab by Karthik Vedula (2024).
 The workflow for making simple edits (ie. editing text on existing pages, adding new blog posts, adding new pages, etc.) is very easy. Note that to make simple changes like these, you don't need to install Jekyll, Docker, or Ruby. For more complex edits, read the rest of this document.
 
 1. Clone the repo.
-2. Make whatever changes you want to make to _pages or _posts. Don't mess with other files unless you've read the relevant documentation below and you're familiar with Jekyll.
+2. Make whatever changes you want to make to the `.md` files in `_pages` or `_posts`. Don't mess with other files unless you've read the relevant documentation below and you're familiar with Jekyll.
 3. Commit and merge your changes to main.
 4. The site will auto deploy.
 
