@@ -1,6 +1,16 @@
-# Shah Lab Public Website
+# Shah Lab Blog site
+Blog site for Shah lab. Built on Jekyll. Based on the [al-folio Jekyll theme](https://github.com/alshedivat/al-folio).
 
-Public website for Shah lab. Built on Jekyll. Based on the [al-folio Jekyll theme](https://github.com/alshedivat/al-folio).
+Adapted for the Shah lab by Karthik Vedula (2024).
+
+## How to make simple edits to this site
+The workflow for making simple edits (ie. editing text on existing pages, adding new blog posts, adding new pages, etc.) is very easy. Note that to make simple changes like these, you don't need to install Jekyll, Docker, or Ruby. For more complex edits, read the rest of this document.
+
+1. Clone the repo.
+2. Make whatever changes you want to make to _pages or _posts. Don't mess with other files unless you've read the relevant documentation below and you're familiar with Jekyll.
+3. Commit and merge your changes to main.
+4. The site will auto deploy.
+
 
 ## Table Of Contents
 
