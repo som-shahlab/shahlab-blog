@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Recent publications from the lab (new).
+description: Recent publications from the lab (new - v2).
 nav: true
 nav_order: 2
 ---
