@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Popular repositories from the Shah Lab.
+description: Popular repositories from the Shah Lab (new).
 nav: true
 nav_order: 4
 ---
